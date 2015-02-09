@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}Setting Profile{% endblock %}
+
+{% block body_block %}
+<h3>This is settings of {{ user.username }} profile</h3>
+<ul>
+    <li><a href="{% url 'auth_password_reset' %}">Reset password</a></li>
+    <li><a href="{% url 'auth_password_change' %}">Change password</a></li>
+</ul>
+{% endblock %}
